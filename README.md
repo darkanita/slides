@@ -1,3 +1,3 @@
 # Repositorio con ejemplos de presentaciones con R Markdown
 
-\centerline{\includegraphics[height=2.3in]{rmarkdown_r.png}}
+En este repositorio se presentan varios ejemplos de presentaciones hechas con R Markdown.
