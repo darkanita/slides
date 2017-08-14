@@ -1,0 +1,83 @@
+---
+title: "Titulo de la presentacion"
+subtitle: "Subtitulo de la presentacion"
+author: "Autor de la presentacion"
+fontsize: 9pt
+output:
+  beamer_presentation:
+    includes:
+      in_header: mystyle1.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, eval=TRUE)
+```
+
+# Primera seccion
+
+## Url utiles
+
+- http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#inserting_pauses
+- Ver este enlace también \url{http://svmiller.com/blog/2015/02/moving-from-beamer-to-r-markdown/}.
+
+
+
+## Slide with a pause
+
+content before the pause
+
+. . .
+
+content after the pause
+
+## Usando verbatim
+
+~~~~~~~
+if (a > 3) {
+  moveShip(5 * gravity, DOWN);
+}
+~~~~~~~
+
+\begin{verbatim}
+if (a > 3) {
+  moveShip(5 * gravity, DOWN);
+}
+\end{verbatim}
+
+\verb|hola|, hola.
+
+# Segunda seccion
+
+## Segundo slide
+A continuacion el codigo:
+
+. . .
+
+```{r, echo=T, eval=T}
+x <- rnorm(n=100, mean=170, sd=15)
+hist(x)
+```
+
+
+## Tercer slide
+
+El siguiente parrafo __no__ esta justificado.
+
+Los antófilos (Anthophila, gr. ‘que aman las flores’), conocidos comúnmente como abejas, son un clado de insectos himenópteros, sin ubicación en categoría taxonómica, dentro de la superfamilia Apoidea. Se trata de un linaje monofilético con más de 20 000 especies conocidas. Las abejas, al igual que las hormigas, evolucionaron a partir de avispas. Los antepasados de las abejas eran miembros de la familia Crabronidae y eran depredadores de insectos. Es posible que las primeras abejas se hayan alimentado del polen que cubría a algunas de sus presas y que, gradualmente, hayan empezado a alimentar a sus crías con polen en vez de insectos.
+
+\justifying
+
+Cuando se escribe un parrafo compuesto por varias lineas es usual que los finales de cada linea no coincidad. Para lograr que este parrafo se vea justificado fue necesario incluir al inicio el comando `\justifying`. \alert{Este parrafo si esta justificado}.
+
+## Texto
+- \emph{Sample Text}
+- \textbf{Sample Text}
+- \textit{Sample Text}
+- \textsl{Sample Text}
+- \alert{Sample Text}
+- \textrm{Sample Text}
+- \textsf{Sample Text}
+- \color{green} Sample Text
+- \structure{Sample Text}
+
+
