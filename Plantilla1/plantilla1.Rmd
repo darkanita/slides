@@ -13,58 +13,88 @@ output:
 knitr::opts_chunk$set(echo=FALSE, eval=TRUE)
 ```
 
-# Primera seccion
+## Getting started
+To work with R Markdown, if necessary:
+
+* Install [R](http://www.r-project.org/)
+* Install the lastest version of [RStudio](http://rstudio.org/download/)
+* Install the latest version of the `knitr` package: `install.packages("knitr")`
+
+# First section
 
 ## Creando secciones y slides
 1. Las secciones se crean escribiendo `#` y luego el nombre de la seccion.
+
 2. Los slides se crean escribiendo `##` y luego el titulo del slide.
 
 ## Incluyendo urls
 
-- Se pueden incluir directamente escribiendo la url: http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#inserting_pauses
-- Se pueden incluri asi: \url{http://svmiller.com/blog/2015/02/moving-from-beamer-to-r-markdown/}.
+- Se pueden incluir directamente escribiendo la url: http://rmarkdown.rstudio.com/
+
+- Se pueden incluir asi: [YouTube](https://www.youtube.com/).
+
+## Ordered list
+
+1. Item 1
+2. Item 2
+3. Item 3
+    + Item 3a
+    + Item 3b
+    
+## Unordered list
+
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
 
 
 
+## Showing R code
+To include R code we can use chunk code.
 
-## Slide with a pause
-
-content before the pause
-
-. . .
-
-content after the pause
-
-## Usando verbatim
-
-~~~~~~~
-if (a > 3) {
-  moveShip(5 * gravity, DOWN);
-}
-~~~~~~~
-
-\begin{verbatim}
-if (a > 3) {
-  moveShip(5 * gravity, DOWN);
-}
-\end{verbatim}
-
-\verb|hola|, hola.
-
-# Segunda seccion
-
-## Segundo slide
-A continuacion el codigo:
-
-. . .
-
-```{r, echo=T, eval=T}
+```{r echo=TRUE, eval=FALSE}
 x <- rnorm(n=100, mean=170, sd=15)
 hist(x)
 ```
 
+## Evaluating R code
+To include R code we can use chunk code.
 
-## Tercer slide
+```{r echo=TRUE, eval=TRUE}
+x <- rnorm(n=100, mean=170, sd=15)
+hist(x)
+```
+
+## Options for echo and eval
+
+- `echo`: if FALSE, knitr will not display the code in the code chunk above it’s results in the final document.
+
+- `eval`: if FALSE, knitr will not run the code in the code chunk.
+
+## Including external code
+We can include code writting it betweewn `~~~~~~~` or between `\begin{verbatim}` and `\end{verbatim}`
+
+Example using `~~~~~~~`.
+
+~~~~~~~
+if (a > 3) {
+  u <- runif(n=a)
+}
+~~~~~~~
+
+Example using `verbatim`.
+
+\begin{verbatim}
+if (a > 3) {
+  u <- runif(n=a)
+}
+\end{verbatim}
+
+# Segunda seccion
+
+
+## Using `\justifying`
 
 El siguiente parrafo __no__ esta justificado.
 
@@ -74,7 +104,8 @@ Los antófilos (Anthophila, gr. ‘que aman las flores’), conocidos comúnment
 
 Cuando se escribe un parrafo compuesto por varias lineas es usual que los finales de cada linea no coincidad. Para lograr que este parrafo se vea justificado fue necesario incluir al inicio el comando `\justifying`. \alert{Este parrafo si esta justificado}.
 
-## Texto
+## Miscellaneous
+
 - \emph{Sample Text}
 - \textbf{Sample Text}
 - \textit{Sample Text}
@@ -85,4 +116,13 @@ Cuando se escribe un parrafo compuesto por varias lineas es usual que los finale
 - \color{green} Sample Text
 - \structure{Sample Text}
 
+## Slide with pauses
+To include pauses we use `. . .`, 3 dots with spaces.
 
+Example:
+
+Content before the pause
+
+. . .
+
+Content after the pause
