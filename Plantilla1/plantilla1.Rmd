@@ -15,10 +15,15 @@ knitr::opts_chunk$set(echo=FALSE, eval=TRUE)
 
 # Primera seccion
 
-## Url utiles
+## Creando secciones y slides
+1. Las secciones se crean escribiendo `#` y luego el nombre de la seccion.
+2. Los slides se crean escribiendo `##` y luego el titulo del slide.
 
-- http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#inserting_pauses
-- Ver este enlace también \url{http://svmiller.com/blog/2015/02/moving-from-beamer-to-r-markdown/}.
+## Incluyendo urls
+
+- Se pueden incluir directamente escribiendo la url: http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#inserting_pauses
+- Se pueden incluri asi: \url{http://svmiller.com/blog/2015/02/moving-from-beamer-to-r-markdown/}.
+
 
 
 
